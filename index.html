@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SYSTEM TERMINAL: URGENT OVERRIDE</title>
+<style>
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+body {
+background-color: #0a0a0c;
+color: #00ff66;
+font-family: 'Courier New', Courier, monospace;
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+overflow-x: hidden;
+text-align: center;
+padding: 20px;
+}
+.stage {
+width: 100%;
+max-width: 600px;
+padding: 40px 20px;
+border-radius: 10px;
+transition: all 0.5s ease;
+}
+@media (max-width: 480px) {
+.stage {
+padding: 25px 15px;
+}
+h1.warning-text {
+font-size: 1.6rem !important;
+}
+.target-name {
+font-size: 1.8rem !important;
+}
+.shark-title {
+font-size: 2.2rem !important;
+}
+.laugh-text {
+font-size: 2.2rem !important;
+}
+.action-btn {
+padding: 12px 30px !important;
+font-size: 1rem !important;
+width: 100%;
+}
+}
+.hidden {
+display: none !important;
+}
+#intro-stage {
+border: 2px solid #ff0055;
+background: rgba(20, 10, 15, 0.9);
+box-shadow: 0 0 30px rgba(255, 0, 85, 0.3);
+}
+h1.warning-text {
+color: #ff0055;
+font-size: 2.5rem;
+letter-spacing: 3px;
+margin-bottom: 20px;
+text-shadow: 0 0 10px rgba(255, 0, 85, 0.7);
+animation: pulse 1.5s infinite alternate;
+}
+.sub-text {
+color: #888;
+font-size: 1.1rem;
+margin-bottom: 15px;
+}
+.target-name {
+color: #00ffff;
+font-size: 3rem;
+font-weight: bold;
+text-transform: uppercase;
+margin-bottom: 30px;
+text-shadow: 0 0 15px rgba(0, 255, 255, 0.8);
+word-wrap: break-word;
+}
+.loader-container {
+width: 100%;
+background-color: #222;
+height: 8px;
+border-radius: 4px;
+margin-bottom: 35px;
+overflow: hidden;
+}
+.loader-bar {
+width: 100%;
+height: 100%;
+background: linear-gradient(90deg, #ff0055, #00ffff);
+animation: loading 2s infinite linear;
+}
+.action-btn {
+background: transparent;
+color: #00ff66;
+border: 2px solid #00ff66;
+padding: 15px 40px;
+font-size: 1.2rem;
+font-family: inherit;
+font-weight: bold;
+cursor: pointer;
+border-radius: 5px;
+text-shadow: 0 0 5px #00ff66;
+box-shadow: 0 0 10px rgba(0, 255, 102, 0.2);
+transition: all 0.3s ease;
+}
+.action-btn:hover {
+background: #00ff66;
+color: #0a0a0c;
+box-shadow: 0 0 25px rgba(0, 255, 102, 0.8);
+}
+#shark-stage {
+background: #0055ff;
+color: white;
+border: 5px solid #fff;
+box-shadow: 0 0 50px rgba(0, 85, 255, 0.8);
+}
+.shark-title {
+font-size: 3rem;
+margin-bottom: 20px;
+animation: bounce 0.5s infinite alternate;
+}
+.gif-wrapper {
+width: 100%;
+border-radius: 8px;
+overflow: hidden;
+box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+#laugh-stage {
+background: black;
+border: 3px solid #ff0000;
+box-shadow: 0 0 40px rgba(255, 0, 0, 0.6);
+}
+.laugh-text {
+color: #ff0000;
+font-size: 3.5rem;
+font-weight: 900;
+margin-bottom: 20px;
+text-shadow: 0 0 20px #ff0000;
+letter-spacing: 2px;
+}
+@keyframes pulse {
+0% { opacity: 0.7; }
+100% { opacity: 1; text-shadow: 0 0 20px rgba(255, 0, 85, 1); }
+}
+@keyframes loading {
+0% { transform: translateX(-100%); }
+100% { transform: translateX(100%); }
+}
+@keyframes bounce {
+0% { transform: translateY(0); }
+100% { transform: translateY(-10px); }
+}
+</style>
+</head>
+<body>
+<div id="intro-stage" class="stage">
+<h1 class="warning-text">⚠️ EMERGENCY DATA TRANSMISSION ⚠️</h1>
+<p class="sub-text">SECET FILE DECODED BY SHADOW_PROGRAMMER45</p>
+<p class="sub-text">This data is only available to some users and will be deleted afterwards</p>
+<div id="target-name" class="target-name">EXTREMELY CLASSSIFIED DOCUMENT</div>
+<div class="loader-container">
+<div class="loader-bar"></div>
+</div>
+<button class="action-btn" onclick="triggerPrank()">DISPLAY THE DATA</button>
+</div>
+<div id="shark-stage" class="stage hidden">
+<h1 class="shark-title">GOTCHA!!!</h1>
+<div class="gif-wrapper">
+<div class="tenor-gif-embed" data-postid="19328046" data-share-method="host" data-aspect-ratio="1.77778" data-width="100%">
+<a href="https://tenor.com/view/baby-shark-doo-doo-doo-doo-ace-trainer-liam-singing-dancing-baby-shark-gif-19328046">Baby Shark Doo Doo Doo Doo Ace Trainer Liam GIF</a>
+</div>
+</div>
+<audio id="shark-audio" loop>
+<source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+</audio>
+</div>
+<div id="laugh-stage" class="stage hidden">
+<h1 class="laugh-text">MUEHEHEHEHEHEHE! 😈</h1>
+<div class="gif-wrapper">
+<div class="tenor-gif-embed" data-postid="9877969650685105034" data-share-method="host" data-aspect-ratio="1.39106" data-width="100%">
+<a href="https://tenor.com/view/muhehe-gif-9877969650685105034">Muhehe Meme</a>
+</div>
+</div>
+</div>
+<script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+<script>
+const urlParams = new URLSearchParams(window.location.search);
+const nameParam = urlParams.get('name');
+if (nameParam) {
+document.getElementById('target-name').innerText = nameParam;
+}
+function triggerPrank() {
+document.getElementById('intro-stage').classList.add('hidden');
+document.getElementById('shark-stage').classList.remove('hidden');
+const audio = document.getElementById('shark-audio');
+audio.play().catch(e => console.log("Audio skipped or blocked."));
+setTimeout(function() {
+audio.pause();
+document.getElementById('shark-stage').classList.add('hidden');
+document.getElementById('laugh-stage').classList.remove('hidden');
+}, 6000);
+}
+</script>
+</body>
+</html>
